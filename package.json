@@ -13,14 +13,19 @@
     "Other"
   ],
   "activationEvents": [
-      "onCommand:inview.showPRPanel"
+      "onCommand:inview.showWebview",
+      "onCommand:inview.helloWorld"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "inview.showPRPanel",
-        "title": "InView: Mostrar Painel de PR"
+        "command": "inview.showWebview",
+        "title": "InView: Show Webview"
+      },
+      {
+        "command": "inview.helloWorld",
+        "title": "InView: Hello World"
       }
     ]
   },
