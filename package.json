@@ -13,8 +13,8 @@
     "Other"
   ],
   "activationEvents": [
-      "onCommand:inview.showWebview",
-      "onCommand:inview.helloWorld"
+    "onCommand:inview.showWebview",
+    "onCommand:inview.helloWorld"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -26,6 +26,10 @@
       {
         "command": "inview.helloWorld",
         "title": "InView: Hello World"
+      },
+      {
+        "command": "inview.analyzePR",
+        "title": "InView: Analyze PR"
       }
     ]
   },
@@ -38,14 +42,19 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.101.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
+    "@types/node-fetch": "^2.6.12",
+    "@types/vscode": "^1.101.0",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
     "@typescript-eslint/parser": "^8.31.1",
-    "eslint": "^9.25.1",
-    "typescript": "^5.8.3",
     "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "node-fetch": "^2.7.0"
   }
 }
